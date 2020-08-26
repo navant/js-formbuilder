@@ -5,11 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Template</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="http://www.google.com/s2/u/0/favicons?domain=css-tricks.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="arivico.png">
 </head>
 <body>
-    <i class="fas fa-eye-dropper"></i>
+    <div class="heading-container">
+        <img src="arivico.png" class="animate__animated animate__bounce avatar"/>
+    </div> 
+    <!-- Form Container-->
+    <div class="container">  
+        <!-- Form Builder -->
+      <div class="signup">
+        <h2>Sign up Today ! </h2>
+      </div>
+        <form id="form">
+            <!-- Form Group -->
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Full Name" required min="3" max="100" name="name">
+            </div>
+            <!-- Mobile no -->
+            <div class="form-group">
+                <label for="phone">Mobile Numnber</label>
+                <input type="tel" id="phone" placeholder="+61-xxxxxxxxxx" required pattern="^\({0,1}((0|\+61)(2|4|3|7|8)){0,1}\){0,1}(\ |-){0,1}[0-9]{2}(\ |-){0,1}[0-9]{2}(\ |-){0,1}[0-9]{1}(\ |-){0,1}[0-9]{3}$" name="phone">
+            </div>
+            <!-- E-mail -->
+            <div class="form-group">
+                <label for="email">Email Addressr</label>
+                <input type="email" id="email" placeholder="aaa@aaa.com" required name="email">
+            </div>
+            <!-- Web Site address-->
+            <div class="form-group">
+                <label for="text">Website Address</label>
+                <input type="text" id="url" placeholder="http://aaa.com" required pattern="^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$" title="Please enter the website url properly" name="website">
+            </div>
+            <!-- Password-->
+            <div class="form-group">
+                <label for="password1">Create Password</label>
+                <input type="password" id="password1" placeholder="Create Password" required 
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,}$" title="Password must contain at least one capital letter, at least one number, and be longer than six charaters." name="password">
+            </div>
+            <div class="form-group">
+                <label for="password2">Confirm Password</label>
+                <input type="password" id="password2" placeholder="Confirm Password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,}$" title="Password must contain at least one capital letter, at least one number, and be longer than six charaters.">
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <!-- Error/Success message -->
+        <div class="message-container">
+            <h3 id="message">Dont Hesitate!</h3>
+        </div>
+    </div>
     <!-- Script file -->
     <script src="script.js"></script>
 </body>
